@@ -44,4 +44,9 @@ objs.push({ ID: "7", Name: "Bilbo", Occupation: "N/A", Age: "111" });
 console.log(objs);
 
 //* 4. Calculate the average age of the group
+let ageSum = objs.reduce((acc, data) => acc + Number(data.Age), 0);
+let aveAge = ageSum / objs.length;
+// console.log(ageSum);
+console.log("The average age of the group is:", aveAge);
+
 //! Part-5
