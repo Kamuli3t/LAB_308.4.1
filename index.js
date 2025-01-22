@@ -50,3 +50,14 @@ let aveAge = ageSum / objs.length;
 console.log("The average age of the group is:", aveAge);
 
 //! Part-5
+//* Comeon! Back to CSV
+// I've priorly separated the header so can I use is? JK!
+
+// let's construct the dataHeader and dataElements
+const dataHeader = Object.keys(objs[0]);
+const dataElements = objs.map((el, index) => Object.values(el));
+
+// Then using the spread operator to merge them to one array
+const arrCSV = [dataHeader, ...dataElements];
+let againCSV = arrCSV.join("\n");
+console.log("Ok, lets go back to square 1! CSV then ", againCSV);
